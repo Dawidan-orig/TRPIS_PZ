@@ -3,7 +3,7 @@ name: Generate and Publish Docs
 on:
   push:
     branches:
-      - main, release
+      - main, Release
   pull_request:
     branches:
       - main
