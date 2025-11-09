@@ -2,6 +2,6 @@
 {
     public void Main(string[] args) 
     {
-        string aboba = "Я всё сломал!!!";
+        string person1ChangedThis = "Не трогайте ничего";
     }
 }
