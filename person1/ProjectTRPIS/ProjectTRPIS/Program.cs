@@ -2,9 +2,9 @@
 {
     public static void Main(string[] args) 
     {
-        int toDivide = 10;
-        int divider = 1;
-        Console.WriteLine(toDivide / divider);
+        int toSumFirst = 10;
+        int toSumSec = 1;
+        Console.WriteLine(Sum(toSumFirst, toSumSec));
     }
 
     public static int Sum(int a, int b)
