@@ -18,5 +18,5 @@
         return a / b;
     }
 
-    public static string Generation() => "Gimme the docs! attempt 4";
+    public static string Generation() => "Gimme the docs! attempt 5";
 }
