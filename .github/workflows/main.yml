@@ -21,4 +21,4 @@ jobs:
     - name: Build
       run: dotnet build person1/ProjectTRPIS/ProjectTRPIS.sln --no-restore --configuration Release
     - name: Test
-      run: dotnet test person1/UnitTests_TRPIS/UnitTests_TRPIS/UnitTests_TRPIS.csproj --no-build --verbosity normal
+      run: dotnet test person1/UnitTests_TRPIS/UnitTests_TRPIS/UnitTests_TRPIS.csproj --no-restore --verbosity normal
