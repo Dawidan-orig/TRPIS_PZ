@@ -4,9 +4,9 @@
     {
       "src": [
         {
-          "src": "../A:\\Browser_Download\\TRPIS_PZ\\TRPIS_PZ\\person1\\ProjectTRPIS",
+          "src": "../TRPIS_PZ\\person1\\ProjectTRPIS\\ProjectTRPIS",
           "files": [
-            "**/*.csproj"
+            "*.csproj"
           ]
         }
       ],
