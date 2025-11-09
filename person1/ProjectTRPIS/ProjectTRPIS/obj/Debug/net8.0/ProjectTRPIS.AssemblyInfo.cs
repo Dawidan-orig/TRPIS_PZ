@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProjectTRPIS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+30e92ab2b1f03df08e4d73c77535b0e62fa6873e")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProjectTRPIS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProjectTRPIS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

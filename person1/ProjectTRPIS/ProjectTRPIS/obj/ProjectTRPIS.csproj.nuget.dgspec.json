@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "A:\\Browser_Download\\TRPIS_PZ\\person1\\ProjectTRPIS\\ProjectTRPIS\\ProjectTRPIS.csproj": {}
+    "A:\\Browser_Download\\TRPIS_PZ\\TRPIS_PZ\\person1\\ProjectTRPIS\\ProjectTRPIS\\ProjectTRPIS.csproj": {}
   },
   "projects": {
-    "A:\\Browser_Download\\TRPIS_PZ\\person1\\ProjectTRPIS\\ProjectTRPIS\\ProjectTRPIS.csproj": {
+    "A:\\Browser_Download\\TRPIS_PZ\\TRPIS_PZ\\person1\\ProjectTRPIS\\ProjectTRPIS\\ProjectTRPIS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\Browser_Download\\TRPIS_PZ\\person1\\ProjectTRPIS\\ProjectTRPIS\\ProjectTRPIS.csproj",
+        "projectUniqueName": "A:\\Browser_Download\\TRPIS_PZ\\TRPIS_PZ\\person1\\ProjectTRPIS\\ProjectTRPIS\\ProjectTRPIS.csproj",
         "projectName": "ProjectTRPIS",
-        "projectPath": "A:\\Browser_Download\\TRPIS_PZ\\person1\\ProjectTRPIS\\ProjectTRPIS\\ProjectTRPIS.csproj",
+        "projectPath": "A:\\Browser_Download\\TRPIS_PZ\\TRPIS_PZ\\person1\\ProjectTRPIS\\ProjectTRPIS\\ProjectTRPIS.csproj",
         "packagesPath": "C:\\Users\\Dawidan\\.nuget\\packages\\",
-        "outputPath": "A:\\Browser_Download\\TRPIS_PZ\\person1\\ProjectTRPIS\\ProjectTRPIS\\obj\\",
+        "outputPath": "A:\\Browser_Download\\TRPIS_PZ\\TRPIS_PZ\\person1\\ProjectTRPIS\\ProjectTRPIS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
