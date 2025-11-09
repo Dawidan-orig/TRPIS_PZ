@@ -17,7 +17,7 @@ jobs:
       with:
         dotnet-version: '8.0.x'
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore person1/ProjectTRPIS/ProjectTRPIS.sln
     - name: Build
       run: dotnet build person1/ProjectTRPIS/ProjectTRPIS.sln --no-restore --configuration Release
     - name: Test
