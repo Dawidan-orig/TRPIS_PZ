@@ -18,9 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="..\..\ProjectTRPIS\ProjectTRPIS.csproj">
+    <Reference Include="ProjectTRPIS">
       <HintPath>..\..\ProjectTRPIS\ProjectTRPIS\bin\Debug\net8.0\ProjectTRPIS.dll</HintPath>
     </Reference>
   </ItemGroup>
-
 </Project>
