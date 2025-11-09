@@ -1,7 +1,14 @@
 ﻿public class Program 
 {
-    public void Main(string[] args) 
+    public static void Main(string[] args) 
     {
-        string person1ChangedThis = "Не трогайте ничего";
+        int toSumFirst = 10;
+        int toSumSec = 1;
+        Console.WriteLine(Sum(toSumFirst, toSumSec));
+    }
+
+    public static int Sum(int a, int b)
+    {
+        return a + b;
     }
 }
