@@ -10,6 +10,7 @@ jobs:
   build:
     runs-on: windows-latest
 
+
     steps:
     - uses: actions/checkout@v3
     - name: Setup .NET SDK
@@ -17,8 +18,11 @@ jobs:
       with:
         dotnet-version: '8.0.x'
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore person1/ProjectTRPIS/ProjectTRPIS.sln
+
+    - name: Restore dependencies for tests
+      run: dotnet restore person1/UnitTests_TRPIS/UnitTests_TRPIS.sln
     - name: Build
-      run: dotnet build --no-restore --configuration Release
+      run: dotnet build person1/ProjectTRPIS/ProjectTRPIS.sln --no-restore --configuration Release
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test person1/UnitTests_TRPIS/UnitTests_TRPIS.sln --no-restore --verbosity normal
