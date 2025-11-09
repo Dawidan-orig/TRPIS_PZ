@@ -17,4 +17,6 @@
     {
         return a / b;
     }
+
+    public static string Generation() => "Gimme the docs!";
 }
