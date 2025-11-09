@@ -19,7 +19,7 @@
 
   <ItemGroup>
     <Reference Include="ProjectTRPIS">
-      <HintPath>..\..\..\TRPIS_PZ\person1\ProjectTRPIS\ProjectTRPIS\bin\Debug\net8.0\ProjectTRPIS.dll</HintPath>
+      <HintPath>..\..\ProjectTRPIS\ProjectTRPIS\bin\Debug\net8.0\ProjectTRPIS.dll</HintPath>
     </Reference>
   </ItemGroup>
 
