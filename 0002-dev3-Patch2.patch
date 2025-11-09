@@ -1,0 +1,21 @@
+From 20d9c30c826ea7771fe0fb83919d9e49039f98fb Mon Sep 17 00:00:00 2001
+From: Dawidan-orig <andrey9davy@gmail.com>
+Date: Sun, 9 Nov 2025 14:32:52 +0300
+Subject: [PATCH 2/2] dev3:Patch2
+
+---
+ person1/ForPatch 2.rtf | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 person1/ForPatch 2.rtf
+
+diff --git a/person1/ForPatch 2.rtf b/person1/ForPatch 2.rtf
+new file mode 100644
+index 0000000..08778d7
+--- /dev/null
++++ b/person1/ForPatch 2.rtf	
+@@ -0,0 +1 @@
++{\rtf1}
+\ No newline at end of file
+-- 
+2.25.0.windows.1
+

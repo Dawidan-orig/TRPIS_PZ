@@ -2,6 +2,8 @@
 {
     public void Main(string[] args) 
     {
-        string person1ChangedThis = "Не трогайте ничего";
+        int toDivide = 10;
+        int divider = 0;
+        Console.WriteLine(toDivide / divider);
     }
 }
