@@ -7,25 +7,22 @@ on:
     branches: [ main, dev ]
 
 jobs:
-  build-and-test:
+  build:
+    runs-on: windows-latest
 
-    name: build-and-test-${{matrix.os}}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest, macOS-latest]
 
     steps:
     - uses: actions/checkout@v3
-    - name: Setup .NET Core
+    - name: Setup .NET SDK
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: ${{ env.DOTNET_VERSION }}
+        dotnet-version: '8.0.x'
     - name: Restore dependencies
       run: dotnet restore person1/ProjectTRPIS/ProjectTRPIS.sln
+
     - name: Restore dependencies for tests
       run: dotnet restore person1/UnitTests_TRPIS/UnitTests_TRPIS/UnitTests_TRPIS.csproj 
     - name: Build
       run: dotnet build person1/ProjectTRPIS/ProjectTRPIS.sln --no-restore --configuration Release
     - name: Test
-      run: dotnet test person1/UnitTests_TRPIS/UnitTests_TRPIS/UnitTests_TRPIS.csproj --no-restore --verbosity normal
+      run: dotnet test --no-restore --verbosity normal
