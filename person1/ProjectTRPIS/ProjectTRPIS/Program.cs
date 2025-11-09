@@ -2,7 +2,6 @@
 {
     public void Main(string[] args) 
     {
-        Console.WriteLine("Hello World!");
-				Console.WriteLine("Hello World from Person1!");
+        string person1ChangedThis = "Не трогайте ничего";
     }
 }
