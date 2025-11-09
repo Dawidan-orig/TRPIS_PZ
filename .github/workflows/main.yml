@@ -18,6 +18,8 @@ jobs:
         dotnet-version: '8.0.x'
     - name: Restore dependencies
       run: dotnet restore person1/ProjectTRPIS/ProjectTRPIS.sln
+    - name: Restore dependencies for tests
+      run: dotnet restore person1/UnitTests_TRPIS/UnitTests_TRPIS/UnitTests_TRPIS.csproj 
     - name: Build
       run: dotnet build person1/ProjectTRPIS/ProjectTRPIS.sln --no-restore --configuration Release
     - name: Test
