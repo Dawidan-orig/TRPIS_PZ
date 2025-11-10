@@ -1,8 +1,0 @@
-{
-  "TRPIS": "TRPIS.yml",
-  "TRPIS.Program": "TRPIS.Program.yml",
-  "TRPIS.Program.Divide(System.Int32,System.Int32)": "TRPIS.Program.yml",
-  "TRPIS.Program.Generation": "TRPIS.Program.yml",
-  "TRPIS.Program.Main(System.String[])": "TRPIS.Program.yml",
-  "TRPIS.Program.Sum(System.Int32,System.Int32)": "TRPIS.Program.yml"
-}
