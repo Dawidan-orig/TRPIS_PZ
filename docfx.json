@@ -6,8 +6,8 @@
         {
           "src": "../TRPIS_PZ\\person1\\ProjectTRPIS\\ProjectTRPIS",
           "files": [
-            "*.csproj"
-          ]
+            "*.csproj",
+          ],
         }
       ],
       "dest": "api"
