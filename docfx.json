@@ -4,10 +4,10 @@
     {
       "src": [
         {
+          "src": "../person1/ProjectTRPIS/ProjectTRPIS/ProjectTRPIS.csproj",
           "files": [
             "*.csproj",
           ],
-		  "cwd": "person1/ProjectTRPIS/ProjectTRPIS"
         }
       ],
       "dest": "api"
