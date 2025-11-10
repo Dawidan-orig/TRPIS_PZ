@@ -4,7 +4,7 @@
     {
       "src": [
         {
-          "src": "../person1/ProjectTRPIS/ProjectTRPIS/ProjectTRPIS.csproj",
+          "src": "../TRPIS_PZ/person1/ProjectTRPIS/ProjectTRPIS/ProjectTRPIS.csproj",
           "files": [
             "*.csproj",
           ],
