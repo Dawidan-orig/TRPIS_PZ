@@ -1,3 +1,5 @@
+using TRPIS;
+
 namespace UnitTests_TRPIS
 {
     public class Tests
