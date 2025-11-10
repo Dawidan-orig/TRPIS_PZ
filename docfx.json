@@ -3,14 +3,12 @@
   "metadata": [
     {
       "src": [
-        {
-          "src": "../TRPIS_PZ/person1/ProjectTRPIS/ProjectTRPIS/ProjectTRPIS.csproj",
-          "files": [
-            "*.csproj",
-          ],
-        }
-      ],
-      "dest": "api"
+      {
+        "files": [ "*.csproj" ],
+        "cwd": "TRPIS_PZ/person1/ProjectTRPIS/ProjectTRPIS"
+      }
+    ],
+    "dest": "api"
     }
   ],
   "build": {
