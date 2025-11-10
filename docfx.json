@@ -16,7 +16,6 @@
   "build": {
     "content": [
       {
-		"files": ["api/**.yml"],
         "files": [
           "**/*.{md,yml}"
         ],
