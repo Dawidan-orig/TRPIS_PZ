@@ -43,6 +43,6 @@
         /// Просто текст
         /// </summary>
         /// <returns></returns>
-        public static string Generation() => "Gimme the docs! attempt 7";
+        public static string Generation() => "Gimme the docs! attempt 12";
     }
 }
