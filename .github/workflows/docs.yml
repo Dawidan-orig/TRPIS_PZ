@@ -32,6 +32,10 @@ jobs:
       with:
         dotnet-version: 8.x
 
+    - name: Restore dependencies
+      run: dotnet restore ProjectTRPIS.csproj
+      working-directory: person1/ProjectTRPIS/ProjectTRPIS
+  
     - run: dotnet tool update -g docfx
     - run: docfx docfx.json
 
