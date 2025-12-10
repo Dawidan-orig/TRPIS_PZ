@@ -4,7 +4,7 @@
     {
       "src": [
         {
-          "src": "../src",
+          "src": "trpis2/",
           "files": [
             "**/*.csproj"
           ]
