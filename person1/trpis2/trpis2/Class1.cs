@@ -46,7 +46,7 @@ namespace trpis2
         }
 
         /// <summary>
-        /// Просто текст
+        /// Этот текст возвращает просьбу, чтобы docfx заработал наконец уже
         /// </summary>
         /// <returns></returns>
         public static string Generation() => "Gimme the docs! attempt 12";

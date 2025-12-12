@@ -1,0 +1,8 @@
+{
+  "trpis2": "trpis2.yml",
+  "trpis2.Class1": "trpis2.Class1.yml",
+  "trpis2.Class1.Divide(System.Int32,System.Int32)": "trpis2.Class1.yml",
+  "trpis2.Class1.Generation": "trpis2.Class1.yml",
+  "trpis2.Class1.Main(System.String[])": "trpis2.Class1.yml",
+  "trpis2.Class1.Sum(System.Int32,System.Int32)": "trpis2.Class1.yml"
+}

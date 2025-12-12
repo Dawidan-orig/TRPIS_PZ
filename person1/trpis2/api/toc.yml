@@ -1,0 +1,10 @@
+### YamlMime:TableOfContent
+items:
+- uid: trpis2
+  name: trpis2
+  type: Namespace
+  items:
+  - uid: trpis2.Class1
+    name: Class1
+    type: Class
+memberLayout: SamePage
