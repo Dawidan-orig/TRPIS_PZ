@@ -1,37 +1,24 @@
-name: Auto-merge DEBUG
+# .github/workflows/auto-merge.yaml
+name: Auto-merge
 on:
   workflow_run:
-    workflows: [".NET Build and Test"]
-    branches: ["Release"]  # ваша ветка!
+    workflows: [.NET Build and Test]
+    branches: [auto-merge]
     types: [completed]
 
 jobs:
-  debug:
+  on-success:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
-    - uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
-        token: ${{ secrets.GITHUB_TOKEN }}
-    
-    - name: DEBUG info
-      run: |
-        echo "Event: ${{ github.event_name }}"
-        echo "Branch: ${{ github.ref }}"
-        echo "Workflow run branch: ${{ github.event.workflow_run.head_branch }}"
-        git branch -a
-        git log --oneline origin/main..origin/Release
-    
-    - name: Attempt merge
-      run: |
-        git config user.name "github-actions"
-        git config user.email "action@github.com"
-        git checkout main
-        git pull origin main
-        if git merge origin/Release --no-ff -m "Test merge"; then
-          echo "MERGE SUCCESS"
-          git push origin main || echo "PUSH FAILED"
-        else
-          echo "MERGE FAILED"
-        fi
+      - uses: actions/checkout@v4
+      - name: Tell git we want the `auto-merge` branch
+        run: git remote set-branches --add origin ${{ github.event.workflow_run.head_branch }}
+      - name: Fetch the target branch
+        run: git fetch --shallow-since="`git show --no-patch --format=%ci HEAD`"
+      - name: Checkout target branch
+        run: git checkout ${{ github.event.workflow_run.head_branch }}
+      - name: Push current head to main
+        run: git push -v origin HEAD:main
+
+
