@@ -1,8 +1,9 @@
+# .github/workflows/auto-merge.yaml
 name: Auto-merge
 on:
   workflow_run:
-    workflows: [".NET Build and Test"]  # имя вашего CI-воркфлоу
-    branches: ["Release"]
+    workflows: [Build]
+    branches: [auto-merge]
     types: [completed]
 
 jobs:
@@ -11,12 +12,11 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - uses: actions/checkout@v4
-      - name: Merge to main
-        run: |
-          git checkout main
-          git pull origin main
-          git fetch origin
-          git checkout -b Release origin/Release
-          git pull origin Release
-          git merge Release --no-ff -m "Auto-merge from workflow"
-          git push origin main
+      - name: Tell git we want the `auto-merge` branch
+        run: git remote set-branches --add origin ${{ github.event.workflow_run.head_branch }}
+      - name: Fetch the target branch
+        run: git fetch --shallow-since="`git show --no-patch --format=%ci HEAD`"
+      - name: Checkout target branch
+        run: git checkout ${{ github.event.workflow_run.head_branch }}
+      - name: Push current head to main
+        run: git push -v origin HEAD:main
