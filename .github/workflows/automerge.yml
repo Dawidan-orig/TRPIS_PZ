@@ -1,7 +1,7 @@
 name: Auto-merge
 on:
   workflow_run:
-    workflows: ["main"]  # имя вашего CI-воркфлоу
+    workflows: [".NET Build and Test"]  # имя вашего CI-воркфлоу
     branches: ["Release"]
     types: [completed]
 
