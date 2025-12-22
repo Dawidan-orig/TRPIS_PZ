@@ -1,8 +1,8 @@
 name: Auto-merge
 on:
   workflow_run:
-    workflows: [".NET Build and Test"]  # имя вашего CI-воркфлоу
-    branches: ["Release"]
+    workflows: [".NET Build and Test"]
+    branches: ["Release"]  # измените на вашу ветку!
     types: [completed]
 
 jobs:
@@ -10,13 +10,16 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
-      - uses: actions/checkout@v4
-      - name: Merge to main
-        run: |
-          git checkout main
-          git pull origin main
-          git fetch origin
-          git checkout -b Release origin/Release
-          git pull origin Release
-          git merge Release --no-ff -m "Auto-merge from workflow"
-          git push origin main
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Merge Release to main
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "action@github.com"
+        git checkout main
+        git pull origin main
+        git merge origin/Release --no-ff -m "Auto-merge Release to main"
+        git push origin main
