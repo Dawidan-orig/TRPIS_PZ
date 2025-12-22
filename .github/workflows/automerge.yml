@@ -3,7 +3,7 @@ name: Auto-merge
 on:
   workflow_run:
     workflows: [Build]
-    branches: [auto-merge]
+    branches: [Release]
     types: [completed]
 
 jobs:
