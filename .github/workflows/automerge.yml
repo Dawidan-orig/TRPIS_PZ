@@ -1,26 +1,22 @@
-name: Auto-merge PR
+# .github/workflows/auto-merge.yaml
+name: Auto-merge
 on:
   workflow_run:
-    workflows: [.NET Build and Test]
-    branches: [Release]  # Целевая ветка для PR
+    workflows: [Build]
+    branches: [Release]
     types: [completed]
 
 jobs:
-  auto-merge:
+  on-success:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'pull_request' }}
-    permissions:
-      pull-requests: write
-      contents: write
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
-      - name: Auto-merge PR
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const prNumber = ${{ github.event.workflow_run.head_sha }};  // Или используйте context для PR
-            await github.rest.pulls.merge({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: context.payload.pull_request.number,  // Требует PR-context
-              merge_method: 'merge'  // или 'squash', 'rebase'
-            });
+      - uses: actions/checkout@v4
+      - name: Tell git we want the `auto-merge` branch
+        run: git remote set-branches --add origin ${{ github.event.workflow_run.head_branch }}
+      - name: Fetch the target branch
+        run: git fetch --shallow-since="`git show --no-patch --format=%ci HEAD`"
+      - name: Checkout target branch
+        run: git checkout ${{ github.event.workflow_run.head_branch }}
+      - name: Push current head to main
+        run: git push -v origin HEAD:main
