@@ -2,7 +2,7 @@
 name: Auto-merge
 on:
   workflow_run:
-    workflows: [Build]
+    workflows: [.NET Build and Test]
     branches: [Release]
     types: [completed]
 
