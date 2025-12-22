@@ -1,7 +1,7 @@
 name: Auto-merge
 on:
   workflow_run:
-    workflows: ["main"]  # имя вашего CI-воркфлоу
+    workflows: [".NET Build and Test"]  # имя вашего CI-воркфлоу
     branches: ["Release"]
     types: [completed]
 
@@ -15,7 +15,8 @@ jobs:
         run: |
           git checkout main
           git pull origin main
-          git checkout Release
+          git fetch origin
+          git checkout -b Release origin/Release
           git pull origin Release
           git merge Release --no-ff -m "Auto-merge from workflow"
           git push origin main
