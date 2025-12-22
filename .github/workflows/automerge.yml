@@ -1,12 +1,12 @@
-name: Auto-merge
+name: Auto-merge DEBUG
 on:
   workflow_run:
     workflows: [".NET Build and Test"]
-    branches: ["Release"]  # измените на вашу ветку!
+    branches: ["Release"]  # ваша ветка!
     types: [completed]
 
 jobs:
-  on-success:
+  debug:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
@@ -15,11 +15,23 @@ jobs:
         fetch-depth: 0
         token: ${{ secrets.GITHUB_TOKEN }}
     
-    - name: Merge Release to main
+    - name: DEBUG info
       run: |
-        git config --global user.name "github-actions"
-        git config --global user.email "action@github.com"
+        echo "Event: ${{ github.event_name }}"
+        echo "Branch: ${{ github.ref }}"
+        echo "Workflow run branch: ${{ github.event.workflow_run.head_branch }}"
+        git branch -a
+        git log --oneline origin/main..origin/Release
+    
+    - name: Attempt merge
+      run: |
+        git config user.name "github-actions"
+        git config user.email "action@github.com"
         git checkout main
         git pull origin main
-        git merge origin/Release --no-ff -m "Auto-merge Release to main"
-        git push origin main
+        if git merge origin/Release --no-ff -m "Test merge"; then
+          echo "MERGE SUCCESS"
+          git push origin main || echo "PUSH FAILED"
+        else
+          echo "MERGE FAILED"
+        fi
