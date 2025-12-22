@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: trpis2
+  commentId: N:trpis2
+  id: trpis2
+  children:
+  - trpis2.Class1
+  langs:
+  - csharp
+  - vb
+  name: trpis2
+  nameWithType: trpis2
+  fullName: trpis2
+  type: Namespace
+  assemblies:
+  - trpis2
+references:
+- uid: trpis2.Class1
+  commentId: T:trpis2.Class1
+  href: trpis2.Class1.html
+  name: Class1
+  nameWithType: Class1
+  fullName: trpis2.Class1

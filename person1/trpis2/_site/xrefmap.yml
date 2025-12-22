@@ -1,0 +1,76 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: trpis2
+  name: trpis2
+  href: api/trpis2.html
+  commentId: N:trpis2
+  fullName: trpis2
+  nameWithType: trpis2
+- uid: trpis2.Class1
+  name: Class1
+  href: api/trpis2.Class1.html
+  commentId: T:trpis2.Class1
+  fullName: trpis2.Class1
+  nameWithType: Class1
+- uid: trpis2.Class1.Divide(System.Int32,System.Int32)
+  name: Divide(int, int)
+  href: api/trpis2.Class1.html#trpis2_Class1_Divide_System_Int32_System_Int32_
+  commentId: M:trpis2.Class1.Divide(System.Int32,System.Int32)
+  name.vb: Divide(Integer, Integer)
+  fullName: trpis2.Class1.Divide(int, int)
+  fullName.vb: trpis2.Class1.Divide(Integer, Integer)
+  nameWithType: Class1.Divide(int, int)
+  nameWithType.vb: Class1.Divide(Integer, Integer)
+- uid: trpis2.Class1.Divide*
+  name: Divide
+  href: api/trpis2.Class1.html#trpis2_Class1_Divide_
+  commentId: Overload:trpis2.Class1.Divide
+  isSpec: "True"
+  fullName: trpis2.Class1.Divide
+  nameWithType: Class1.Divide
+- uid: trpis2.Class1.Generation
+  name: Generation()
+  href: api/trpis2.Class1.html#trpis2_Class1_Generation
+  commentId: M:trpis2.Class1.Generation
+  fullName: trpis2.Class1.Generation()
+  nameWithType: Class1.Generation()
+- uid: trpis2.Class1.Generation*
+  name: Generation
+  href: api/trpis2.Class1.html#trpis2_Class1_Generation_
+  commentId: Overload:trpis2.Class1.Generation
+  isSpec: "True"
+  fullName: trpis2.Class1.Generation
+  nameWithType: Class1.Generation
+- uid: trpis2.Class1.Main(System.String[])
+  name: Main(string[])
+  href: api/trpis2.Class1.html#trpis2_Class1_Main_System_String___
+  commentId: M:trpis2.Class1.Main(System.String[])
+  name.vb: Main(String())
+  fullName: trpis2.Class1.Main(string[])
+  fullName.vb: trpis2.Class1.Main(String())
+  nameWithType: Class1.Main(string[])
+  nameWithType.vb: Class1.Main(String())
+- uid: trpis2.Class1.Main*
+  name: Main
+  href: api/trpis2.Class1.html#trpis2_Class1_Main_
+  commentId: Overload:trpis2.Class1.Main
+  isSpec: "True"
+  fullName: trpis2.Class1.Main
+  nameWithType: Class1.Main
+- uid: trpis2.Class1.Sum(System.Int32,System.Int32)
+  name: Sum(int, int)
+  href: api/trpis2.Class1.html#trpis2_Class1_Sum_System_Int32_System_Int32_
+  commentId: M:trpis2.Class1.Sum(System.Int32,System.Int32)
+  name.vb: Sum(Integer, Integer)
+  fullName: trpis2.Class1.Sum(int, int)
+  fullName.vb: trpis2.Class1.Sum(Integer, Integer)
+  nameWithType: Class1.Sum(int, int)
+  nameWithType.vb: Class1.Sum(Integer, Integer)
+- uid: trpis2.Class1.Sum*
+  name: Sum
+  href: api/trpis2.Class1.html#trpis2_Class1_Sum_
+  commentId: Overload:trpis2.Class1.Sum
+  isSpec: "True"
+  fullName: trpis2.Class1.Sum
+  nameWithType: Class1.Sum
